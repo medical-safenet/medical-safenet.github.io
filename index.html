@@ -14,414 +14,356 @@
             transition: all 0.3s ease;
         }
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
         .gold-text {
-            background: linear-gradient(45deg, #b8860b, #ffd700);
+            background: linear-gradient(45deg, #d4af37, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-        .hero-gradient {
+        .section-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .section-divider {
-            background: linear-gradient(90deg, transparent, #d1d5db, transparent);
-            height: 1px;
-            margin: 4rem 0;
         }
     </style>
 </head>
-<body class="smooth-scroll">
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-white bg-opacity-95 backdrop-blur-md shadow-lg">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-gray-800">
-                    Medical<span class="gold-text">SafeNet</span>
-                </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300">サービス</a>
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition duration-300">特徴</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">お問い合わせ</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
-            <div class="px-6 py-4 space-y-2">
-                <a href="#services" class="block text-gray-700 hover:text-blue-600">サービス</a>
-                <a href="#features" class="block text-gray-700 hover:text-blue-600">特徴</a>
-                <a href="#contact" class="block text-gray-700 hover:text-blue-600">お問い合わせ</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gray-50">
 
-    <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                医療従事者の<br>
-                <span class="gold-text">未来を変える</span>
+    <!-- ヒーローセクション -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
+                Medical <span class="gold-text">Safe Net</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100">
-                キャリア・住環境・パートナーシップ<br>
-                あなたの人生をトータルサポート
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                医療従事者の未来を変える<br>
+                トータルライフサポートサービス
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#services" class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                     サービスを見る
                 </a>
-                <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300">
-                    無料相談はこちら
+                <a href="#contact" class="border-2 border-gray-700 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-700 hover:text-white transition-all duration-300">
+                    今すぐ相談
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- メインメッセージ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                医療従事者を<br><span class="gold-text">不当な搾取</span>から守る
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                転職、住環境、パートナーシップ。<br>
+                医療従事者の人生における重要な3つの領域で<br>
+                業界最安レベルの手数料を実現し、<br>
+                真に価値のあるサポートを提供します。
+            </p>
+        </div>
+    </section>
+
+    <!-- サービス紹介 -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                3つの専門サポート
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- キャリアサポート -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-briefcase text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">キャリアサポート</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">医師・看護師転職支援</h4>
+                            <p class="text-gray-600 text-sm">専門知識を活かした最適なマッチング</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">医師バイト紹介</h4>
+                            <p class="text-gray-600 text-sm">高時給案件の優先紹介</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-4 mt-6">
+                            <p class="text-sm text-blue-800 font-semibold">完全成果報酬・業界最安手数料</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 不動産サポート -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">不動産サポート</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">賃貸物件紹介</h4>
+                            <p class="text-gray-600 text-sm">医療従事者のライフスタイルに最適化</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">初期費用削減</h4>
+                            <p class="text-gray-600 text-sm">不要な仲介手数料をカット</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4 mt-6">
+                            <p class="text-sm text-green-800 font-semibold">割安な初期費用を実現</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 婚活マッチング -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">婚活マッチング</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-pink-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">医師同士のマッチング</h4>
+                            <p class="text-gray-600 text-sm">都内パワーカップル形成支援</p>
+                        </div>
+                        <div class="border-l-4 border-pink-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">医師・看護師間マッチング</h4>
+                            <p class="text-gray-600 text-sm">医療現場を理解し合える関係</p>
+                        </div>
+                        <div class="bg-pink-50 rounded-lg p-4 mt-6">
+                            <p class="text-sm text-pink-800 font-semibold">不景気を乗り切る強固なパートナーシップ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 選ばれる理由 -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">Medical Safe Net について</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 leading-relaxed mb-12">
-                    代々医療法人・不動産会社を経営する家系出身。<br>
-                    医師が不当に搾取される医療業界の現状に問題意識を持ち、<br>
-                    メディカルセーフネットを設立しました。
-                </p>
-                <div class="bg-gray-50 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">私たちのミッション</h3>
-                    <p class="text-lg text-gray-700">
-                        医療従事者が本当に必要としているサポートを、適正価格で提供し、<br>
-                        より良いライフスタイルの実現をお手伝いします。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 gradient-bg">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">サービス内容</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600">3つの専門分野で、あなたの人生をトータルサポート</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Career Support -->
-                <div class="bg-white rounded-3xl p-8 shadow-xl card-hover cursor-pointer" onclick="toggleDetails('career')">
-                    <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-briefcase text-3xl text-blue-600"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">キャリアサポート</h3>
-                        <p class="text-gray-600">転職・バイト紹介</p>
-                    </div>
-                    <div id="career-details" class="hidden">
-                        <ul class="space-y-2 text-gray-700">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>医師転職支援</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>看護師転職支援</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>医師バイト紹介</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>完全成果報酬制</li>
-                        </ul>
-                    </div>
-                    <div class="text-center mt-6">
-                        <span class="text-blue-600 font-semibold">詳細を見る <i class="fas fa-chevron-down ml-1"></i></span>
-                    </div>
-                </div>
-
-                <!-- Real Estate -->
-                <div class="bg-white rounded-3xl p-8 shadow-xl card-hover cursor-pointer" onclick="toggleDetails('realestate')">
-                    <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-home text-3xl text-green-600"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">不動産紹介</h3>
-                        <p class="text-gray-600">割安な初期費用を実現</p>
-                    </div>
-                    <div id="realestate-details" class="hidden">
-                        <ul class="space-y-2 text-gray-700">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>賃貸物件メイン</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>仲介手数料削減</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>初期費用最適化</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>医療従事者特化</li>
-                        </ul>
-                    </div>
-                    <div class="text-center mt-6">
-                        <span class="text-green-600 font-semibold">詳細を見る <i class="fas fa-chevron-down ml-1"></i></span>
-                    </div>
-                </div>
-
-                <!-- Matchmaking -->
-                <div class="bg-white rounded-3xl p-8 shadow-xl card-hover cursor-pointer" onclick="toggleDetails('matchmaking')">
-                    <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-heart text-3xl text-pink-600"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">婚活マッチング</h3>
-                        <p class="text-gray-600">医療従事者専門</p>
-                    </div>
-                    <div id="matchmaking-details" class="hidden">
-                        <ul class="space-y-2 text-gray-700">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>医師同士のマッチング</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>医師・看護師間マッチング</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>都内パワーカップル</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i>専門カウンセラー</li>
-                        </ul>
-                    </div>
-                    <div class="text-center mt-6">
-                        <span class="text-pink-600 font-semibold">詳細を見る <i class="fas fa-chevron-down ml-1"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">選ばれる理由</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                選ばれる5つの理由
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <div class="text-center p-6">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-user-md text-2xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">現役医師運営</h3>
-                    <p class="text-gray-600">医療現場を知る現役医師が直接サポート</p>
+                    <h3 class="font-bold text-gray-800 mb-2">現役医師運営</h3>
+                    <p class="text-sm text-gray-600">医療現場を知る専門家による的確なサポート</p>
                 </div>
-
+                
                 <div class="text-center p-6">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                        <i class="fas fa-dollar-sign text-2xl text-green-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">業界最安手数料</h3>
-                    <p class="text-gray-600">不当な搾取から医療従事者を守る良心価格</p>
+                    <h3 class="font-bold text-gray-800 mb-2">業界最安手数料</h3>
+                    <p class="text-sm text-gray-600">不当な搾取から医療従事者を守る良心的価格</p>
                 </div>
-
+                
                 <div class="text-center p-6">
                     <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-users text-2xl text-purple-600"></i>
+                        <i class="fas fa-handshake text-2xl text-purple-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">専門エージェント</h3>
-                    <p class="text-gray-600">各分野の専門家が質の高いサービスを提供</p>
+                    <h3 class="font-bold text-gray-800 mb-2">完全成果報酬</h3>
+                    <p class="text-sm text-gray-600">相談・カウンセリングは無料、成功時のみ料金発生</p>
                 </div>
-
+                
                 <div class="text-center p-6">
                     <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-handshake text-2xl text-yellow-600"></i>
+                        <i class="fas fa-shield-alt text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">完全成果報酬</h3>
-                    <p class="text-gray-600">相談・カウンセリングは完全無料</p>
+                    <h3 class="font-bold text-gray-800 mb-2">プライバシー厳守</h3>
+                    <p class="text-sm text-gray-600">医療従事者特有の事情を理解した秘密保持</p>
                 </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-lock text-2xl text-indigo-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">プライバシー厳守</h3>
-                    <p class="text-gray-600">医療従事者特有の事情を理解した秘密保持</p>
-                </div>
-
+                
                 <div class="text-center p-6">
                     <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-heart text-2xl text-red-600"></i>
+                        <i class="fas fa-users text-2xl text-red-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">長期サポート</h3>
-                    <p class="text-gray-600">契約後のアフターフォローまで責任を持って対応</p>
+                    <h3 class="font-bold text-gray-800 mb-2">専門エージェント</h3>
+                    <p class="text-sm text-gray-600">各分野の専門家による高品質サービス</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 gradient-bg">
+    <!-- 代表者について -->
+    <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">お問い合わせ</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600">まずはお気軽にご相談ください</p>
-            </div>
-
             <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Contact Form -->
-                    <div class="bg-white rounded-3xl p-8 shadow-xl">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">メールでお問い合わせ</h3>
-                        <form action="mailto:medicalsateynet@icloud.com" method="post" enctype="text/plain">
-                            <div class="mb-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2">お名前</label>
-                                <input type="text" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2">職種</label>
-                                <select name="occupation" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
-                                    <option value="">選択してください</option>
-                                    <option value="医師">医師</option>
-                                    <option value="看護師">看護師</option>
-                                    <option value="その他医療従事者">その他医療従事者</option>
-                                </select>
-                            </div>
-                            <div class="mb-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2">ご希望のサービス</label>
-                                <select name="service" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
-                                    <option value="">選択してください</option>
-                                    <option value="転職相談">転職相談</option>
-                                    <option value="バイト紹介">バイト紹介</option>
-                                    <option value="不動産相談">不動産相談</option>
-                                    <option value="婚活マッチング">婚活マッチング</option>
-                                </select>
-                            </div>
-                            <div class="mb-6">
-                                <label class="block text-gray-700 text-sm font-bold mb-2">メッセージ</label>
-                                <textarea name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="ご相談内容をお聞かせください"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                                メールで相談する
-                            </button>
-                        </form>
-                        <div class="mt-4 text-center">
-                            <a href="/cdn-cgi/l/email-protection#234e46474a40424f504257465a4d4657634a404f4c56470d404c4e" class="text-blue-600 hover:underline">
-                                <i class="fas fa-envelope mr-2"></i><span class="__cf_email__" data-cfemail="69040c0d000a08051a081d0c10070c1d29000a05061c0d470a0604">[email&#160;protected]</span>
-                            </a>
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                    代表者について
+                </h2>
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-center mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-tie text-4xl text-white"></i>
                         </div>
                     </div>
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                        <p>
+                            代々医療法人・不動産会社を経営する家系に生まれ、現在は現役医師として医療現場に従事しております。
+                        </p>
+                        <p>
+                            長年にわたり医療業界を見つめてきた中で、医師や看護師が不当に搾取される現状に強い問題意識を持ち、「医療従事者を守る」という使命感からメディカルセーフネットを設立いたしました。
+                        </p>
+                        <p>
+                            現役医師ならではの視点と、家系に受け継がれてきた事業経験を活かし、医療従事者の皆様のキャリア・住環境・パートナーシップをトータルサポートいたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- LINE Contact -->
-                    <div class="bg-white rounded-3xl p-8 shadow-xl text-center">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">LINEで簡単相談</h3>
-                        <div class="mb-6">
-                            <div class="w-48 h-48 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center mb-4">
-                                <div class="text-center">
-                                    <i class="fab fa-line text-6xl text-green-500 mb-2"></i>
-                                    <p class="text-sm text-gray-600">QRコードを<br>スキャンしてください</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-600 mb-4">
-                                スマートフォンでQRコードを読み取り、<br>
-                                友だち追加してお気軽にご相談ください
+    <!-- お問い合わせ -->
+    <section id="contact" class="section-bg py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-12">
+                まずはお気軽にご相談ください
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- LINE相談 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fab fa-line text-green-500 mr-3"></i>
+                        LINE で相談
+                    </h3>
+                    <div class="mb-6">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/b3daf00e537d76915ae19a084b400450" alt="LINE QRコード" class="w-48 h-48 mx-auto rounded-lg shadow-md">
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        QRコードをスキャンして<br>
+                        今すぐLINE友だち追加
+                    </p>
+                    <div class="bg-green-50 rounded-lg p-4">
+                        <p class="text-sm text-green-800">
+                            <i class="fas fa-clock mr-2"></i>
+                            24時間受付・迅速対応
+                        </p>
+                    </div>
+                </div>
+
+                <!-- メール相談 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-envelope text-blue-500 mr-3"></i>
+                        メール で相談
+                    </h3>
+                    <div class="mb-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <p class="text-blue-800 font-mono text-lg">
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f29f97969b91939e819386978b9c9786b29b919e9d8796dc919d9f">[email&#160;protected]</a>
                             </p>
                         </div>
-                        <div class="space-y-3 text-sm text-gray-600">
-                            <p><i class="fas fa-clock mr-2 text-blue-500"></i>24時間受付</p>
-                            <p><i class="fas fa-reply mr-2 text-green-500"></i>迅速な返信</p>
-                            <p><i class="fas fa-lock mr-2 text-red-500"></i>秘密厳守</p>
-                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        正式なお問い合わせ・<br>
+                        詳細なご相談はメールで
+                    </p>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-sm text-blue-800">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            完全秘密厳守でご対応
+                        </p>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-12 bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
+                <p class="text-white text-lg">
+                    <i class="fas fa-gift mr-2 text-yellow-300"></i>
+                    初回相談・カウンセリングは<span class="font-bold text-yellow-300">完全無料</span>
+                </p>
+                <p class="text-white text-sm mt-2">
+                    成果報酬型のため、成功するまで費用は一切発生いたしません
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-8">
-                <div class="text-3xl font-bold mb-4">
-                    Medical<span class="gold-text">SafeNet</span>
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-4">
+                    Medical <span class="gold-text">Safe Net</span>
+                </h3>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                    医療従事者の皆様を不当な搾取から守り、<br>
+                    より良いライフスタイルの実現を支援します
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div>
+                        <h4 class="font-bold mb-4">サービス</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>転職・バイト紹介</li>
+                            <li>不動産紹介</li>
+                            <li>婚活マッチング</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">特徴</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>現役医師運営</li>
+                            <li>完全成果報酬</li>
+                            <li>業界最安手数料</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">お問い合わせ</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>LINE: QRコードから</li>
+                            <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6bbb3b2bfb5b7baa5b7a2b3afb8b3a296bfb5bab9a3b2f8b5b9bb">[email&#160;protected]</a></li>
+                            <li>相談無料・秘密厳守</li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="text-gray-400">医療従事者のトータルライフサポート</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">サービス</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#services" class="hover:text-white transition duration-300">キャリアサポート</a></li>
-                        <li><a href="#services" class="hover:text-white transition duration-300">不動産紹介</a></li>
-                        <li><a href="#services" class="hover:text-white transition duration-300">婚活マッチング</a></li>
-                    </ul>
+                
+                <div class="border-t border-gray-700 mt-8 pt-8">
+                    <p class="text-sm text-gray-500">
+                        &copy; 2024 Medical Safe Net. All rights reserved.
+                    </p>
                 </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">会社情報</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition duration-300">会社概要</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">プライバシーポリシー</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">利用規約</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">お問い合わせ</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><i class="fas fa-envelope mr-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0ada5a4a9a3a1acb3a1b4a5b9aea5b480a9a3acafb5a4eea3afad">[email&#160;protected]</a></li>
-                        <li><i class="fab fa-line mr-2"></i>LINE公式アカウント</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-            <div class="text-center text-gray-400">
-                <p>&copy; 2024 Medical Safe Net. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- スムーススクロール -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Service details toggle
-        function toggleDetails(service) {
-            const details = document.getElementById(service + '-details');
-            const isHidden = details.classList.contains('hidden');
-            
-            // Hide all details first
-            document.querySelectorAll('[id$="-details"]').forEach(el => {
-                el.classList.add('hidden');
-            });
-            
-            // Show clicked details if it was hidden
-            if (isHidden) {
-                details.classList.remove('hidden');
-            }
-        }
-
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.getElementById('mobile-menu').classList.add('hidden');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"975953791bdf5ebb","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9759dce328bfd793","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
     <script id="html_badge_script1">
         window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDu6P5z415G5W4ODb%2FNATZ%2F8tFgzjfmd6%2FQUx55AnCR0bsdTl62jTl1iHnkkNpUnlSEcVh4Jmvc55znKrnkQk1ubv1rUrRvRWTK7T%2Fm%2BsacDHifwoBs%2BSVvS%2FKgAyJecY7C2KWHxwWDTt%2FI7cO1O2b4C1xjPIwYaJ9VU%2BXc9iteJas0qvlR5SEzNEnrFxCg28FZUFjyHR1xXPlmC%2BLPThdZecKixyqz6RpjWuizbA3yeeo9ktBM5iEj7GH7ChzyrcTIjIWF%2FnSS7UPzvnM9jbMvVcfSPmINtd1WS5pcmvYivy%2Ba06rx6eWG7z77Ml3xEKLiS4tBr860AQx2qmtdUha3pRONRCUVZftcS%2BrAfa0NMxSLrAJW0%2BlXywnHy%2FHPmLUv%2BxK6hj%2FL1wasDKTdTHxnNgfwoLLaqKE3aQWcc%2FR6k8Qj3w70eF70%2BC9HtG6kcMSFUmxt8%2FW6bUbTBjE%2FeDotn6DwKjnORfU2U%2FLot8f8KU4fJ7RyLau5c4ewkoTY2hFzE69d%2FYmJETZFgR7CgKFYg%3D";
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDmeOHFKqP71kSB%2B9yZOXJrRavp19G%2BRydhKHDT8yRlopwBljRtGdmOgtQKyM%2BUqyzibs2W%2BFsGuBx%2F7F5%2FoaIQgbfPFyGwmG%2BNO%2ByU5xbEDp35vlkU1Z%2FOMf7iensWeD%2Bs4ffh6xbSsQ8WgvVsozlrgEyWL%2BUfza3vTwVV%2FXQw9Pl9ozehAyT9anjOgR004wUVH3irypFCH4qEJb2KhZPtH8Nz9BlclC1kjjNgbXvMv4PquPfAkIH3RubAUAEYOrYiTajn5gGYEm4czUxlRBPFYRk6u%2FxFa%2FGMvTVsJsAWvK35fzm1GHwYCjbvFDX6XGHTET0z3l%2FaFps9YkusknrjGdgKlbJG0x1Jb0hiISdNefViEkWCfLTW39tFd5TZrCOrqal598r4oQnv1GjBGx6Ggs0I%2BiJEgrJuVTg%2BLacsoNSVxipngwGTGORR4RA1D5MSejQd6RJ6joGq6tDz0E04REZFlBVDdx5LSuGJhw3otmUJYt1caXODq9Aaa8Fiyrm5KCbE8TeF6%2FpkfTrdG2i7Q%3D";
         window.__genspark_locale = "ja-JP";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDu6P5z415G5W4ODb/NATZ/8tFgzjfmd6/QUx55AnCR0bsdTl62jTl1iHnkkNpUnlSEcVh4Jmvc55znKrnkQk1ubv1rUrRvRWTK7T/m+sacDHifwoBs+SVvS/KgAyJecY7C2KWHxwWDTt/I7cO1O2b4C1xjPIwYaJ9VU+Xc9iteJas0qvlR5SEzNEnrFxCg28FZUFjyHR1xXPlmC+LPThdZecKixyqz6RpjWuizbA3yeeo9ktBM5iEj7GH7ChzyrcTIjIWF/nSS7UPzvnM9jbMvVcfSPmINtd1WS5pcmvYivy+a06rx6eWG7z77Ml3xEKLiS4tBr860AQx2qmtdUha3pRONRCUVZftcS+rAfa0NMxSLrAJW0+lXywnHy/HPmLUv+xK6hj/L1wasDKTdTHxnNgfwoLLaqKE3aQWcc/R6k8Qj3w70eF70+C9HtG6kcMSFUmxt8/W6bUbTBjE/eDotn6DwKjnORfU2U/Lot8f8KU4fJ7RyLau5c4ewkoTY2hFzE69d/YmJETZFgR7CgKFYg=";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDmeOHFKqP71kSB+9yZOXJrRavp19G+RydhKHDT8yRlopwBljRtGdmOgtQKyM+Uqyzibs2W+FsGuBx/7F5/oaIQgbfPFyGwmG+NO+yU5xbEDp35vlkU1Z/OMf7iensWeD+s4ffh6xbSsQ8WgvVsozlrgEyWL+Ufza3vTwVV/XQw9Pl9ozehAyT9anjOgR004wUVH3irypFCH4qEJb2KhZPtH8Nz9BlclC1kjjNgbXvMv4PquPfAkIH3RubAUAEYOrYiTajn5gGYEm4czUxlRBPFYRk6u/xFa/GMvTVsJsAWvK35fzm1GHwYCjbvFDX6XGHTET0z3l/aFps9YkusknrjGdgKlbJG0x1Jb0hiISdNefViEkWCfLTW39tFd5TZrCOrqal598r4oQnv1GjBGx6Ggs0I+iJEgrJuVTg+LacsoNSVxipngwGTGORR4RA1D5MSejQd6RJ6joGq6tDz0E04REZFlBVDdx5LSuGJhw3otmUJYt1caXODq9Aaa8Fiyrm5KCbE8TeF6/pkfTrdG2i7Q=";
     </script>
     
     <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
